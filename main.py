@@ -1,7 +1,8 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, send_file
 import os
 from werkzeug.utils import secure_filename
 
+UPLOAD_FOLDER = '/candidateData'
 
 app = Flask(__name__)
 
@@ -15,10 +16,10 @@ def submit():
         result = request.form
         f = request.files['photo']
         filename = result.get('name') + '_' + secure_filename(f.filename)
-        filepath = os.path.join('./uploadedFiles', filename)
+        filepath = os.path.join('static/uploadedFiles', filename)
         f.save(filepath)
         
-        c = open('./candidateData/' + result.get('name') + '.csv', 'w+')
+        c = open('static/candidateData/' + result.get('name') + '.csv', 'w+')
 
         lineTitle = 'name, photo, issue, opinion on issue, issue importance rank\r\n'
         lineValues = result.get('name') + ',' + filepath + ','
@@ -42,6 +43,10 @@ def home():
 @app.route('/vote')
 def vote():
     return render_template('CandiDate_4.html')
+
+@app.route('/candidateData/a.csv')
+def view():
+    return send_file('static/candidateData/a.csv')
 
 if __name__ == '__main__':
     app.run(debug=True)
