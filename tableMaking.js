@@ -32,17 +32,21 @@ function addRow(candidate){
 		
 		addElement("table", "", "current", "choices", "currentTable");
 			addElement("tr", "", "currentTable", "", "row1");
-				addElement("td", "a", "row1");
+				addElement("td", "blahahsdaohsd", "row1");
 			addElement("tr", "", "currentTable", "", "row2");
-				addElement("td", "a", "row2", "", "rateCol");
+				addElement("td", "", "row2", "", "rateCol");
 					addElement("select", "", "rateCol", "Rating", "rates")
 		
-		for (i=1; i<=10;i++){
-			addElement("option", i, "rates", "", "", i);
+		for (b=1; b<=10;b++){
+			addElement("option", b, "rates", "", "", b);
 		}
 		
-		document.getElementById("current").setAttribute("id", i+1);
+		document.getElementById("current").setAttribute("id", i);
 		document.getElementById("currentTable").removeAttribute("id");
+		document.getElementById("row1").removeAttribute("id");
+		document.getElementById("row2").removeAttribute("id");
+		document.getElementById("rateCol").removeAttribute("id");
+		document.getElementById("rates").removeAttribute("id");
 	}
 	
 	document.getElementById("temp").removeAttribute("id");	
