@@ -11,26 +11,3 @@ function validation() {
 		return false;
 	}
 }
-
-window.addEventListener("load", function () {
-	function sendData() {
-		const XHR = new XMLHttpRequest();
-		var formData = new FormData(document.getElementById("candidate_side"));
-
-		XHR.addEventListener("load", function (event) {
-			alert("Oops! Something went wrong.");
-		});
-
-		XHR.open("POST", "/example.php");
-
-		XHR.send(formData);
-	}
-
-	const form = document.getElementById("candidate_side");
-
-	form.addEventListener("submit", function (event) {
-		event.preventDefault();
-
-		sendData();
-	});
-});
