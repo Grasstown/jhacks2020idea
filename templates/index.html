@@ -2,13 +2,13 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Candidate form</title>
-  <link rel="stylesheet" href="./style.css">
-  <script  src="./script.js"></script>
+  <title>CandiDate - Candidate form</title>
+  <link rel="stylesheet" href="../static/css/style.css">
+  <script src="../static/js/script.js"></script>
 
 </head>
 <body>
-<form id="candidate_side" method="post" onsubmit="return validation()">
+<form id="candidate_side" action="http://localhost:5000/submit" method="POST" onsubmit="return validation()" enctype="multipart/form-data">
 	<fieldset>
 		<legend>Basic Information</legend>
 		<label>Name:</label><br>
@@ -29,11 +29,15 @@
 		<label>Importance:</label><br>
 		<input class="import" name="Foreign Policy Importance"type="number" min="1" max="100" required><br>
 		
-		<label>Abortion:</label><br>
-		<textarea id="abort" name="Abortion Stance" class="stance"></textarea><br>
+		<label>Reproductive Rights:</label><br>
+		<textarea id="abort" name="Reproductive Rights Stance" class="stance"></textarea><br>
 		<label>Importance:</label><br>
-		<input class="import" name="Abortion Importance" type="number" min="1" max="100" required><br>
+		<input class="import" name="Reproductive Rights Importance" type="number" min="1" max="100" required><br>
 		
+		<label>Gun Control:</label><br>
+		<textarea id="gc" name="Gun Control Stance" class="stance"></textarea><br>
+		<input class="import" name="Gun Control Importance" type="number" min="1" max="100" required><br>
+
 		<label>Education:</label><br>
 		<textarea id="edu" name="Education Stance" class="stance"></textarea><br>
 		<label>Importance:</label><br>
