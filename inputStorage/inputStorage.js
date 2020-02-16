@@ -9,8 +9,8 @@ var rows = [["Name", "Issue", "Opinion", "Rank"]]
 
 for(i = 0, a = 0; i < issues.length; i ++, a+= 2){
 	rows.push([name, issues[0],
-	document.getElementById("candidate_side").elements[3+a],
-	document.getElementById("candidate_side").elements[4+a]]);
+	document.getElementById("candidate_side").elements[3+a].value,
+	document.getElementById("candidate_side").elements[4+a].value]);
 	
 	// first 3 elements in form are name photo bio
 	// following are pairs of opinion + rank inputs
