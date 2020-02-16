@@ -28,6 +28,8 @@ function addRow(candidate){
 		addElement("td", text, "temp", "facts", i);
 	}
 	
+	document.getElementById("temp").removeAttribute("id");	
+	
 	for(i=4; i<4+ISSUE_NUM; i++){
 		document.getElementById(i).setAttribute("id", "current");
 		
@@ -50,5 +52,8 @@ function addRow(candidate){
 		document.getElementById("rates").removeAttribute("id");
 	}
 	
-	document.getElementById("temp").removeAttribute("id");	
+	for(i=4; i<4+ISSUE_NUM; i++){
+		document.getElementById(i).removeAttribute("id");
+	}
+	
 }
