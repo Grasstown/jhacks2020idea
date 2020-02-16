@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Another option would be to have the script here that literally creates the tables based
+on the csv file. I would look up how to create tables in javascript and apply the attributes for
+the table that I have created below-->
+<meta charset="utf-8"/>
+<style>
+body {
+    height: 100%;
+    background: white;
+}
+
+.info {
+    border:3px solid black
+
+}
+.facts {
+    border:3px solid black
+}
+
+.heading {
+    color: black;
+    font-size: 80px;
+    font-family: Helvetica;
+}
+
+.candidates {
+    background-color:white;
+    font-family: Helvetica;
+}
+
+p {
+    font-family: Helvetica;
+}
+.flag {
+  float: right;
+  size: 1px;
+
+}
+</style>
+<title>CandiDate</title>
+</head>
+<body>
+  <!--I added a logo here. If this logo is not good enough just insert another png or jpg image in 
+  img src. To edit it so it will only appear in the top right corner there is a css attribute that
+should do that.-->
+<img src="800px-Flag_of_the_United_States.png" alt="works" class="flag">
+<h1 class="heading">Welcome to Candidate</h1>
+
+<div class="Instructions">
+<p>
+    Welcome to CandiDate. 
+    Below, you will see the potential candidates and where
+    they stand on the current issues. 
+    Please rank yourself on the current issues.
+</p>
+</div>
+<div class="Candidates">
+<table class="candidates">
+<tr class="issues">
+    <th class="info">Name</th>
+    <th class="info">Age</th>
+    <th class="info">State</th>
+    <th class="info">Party</th>
+    <th class="info">Foreign Policy</th>
+    <th class="info">Religious Freedom</th>
+    <th class="info">Reproductive Rights</th>
+    <th class="info">Gun Control</th>
+    <th class="info">Tax Reform</th>
+    <th class="info">Education</th>
+</tr>
+
+<tr>
+    <td class="facts">
+        Bob
+        <!-- Rather than have hard coded values in these cells, do <script></script>
+        that will read a data (in this case, the candidate name) from the csv file Do this in between all the
+      I looked up some ways to do this on stack over flow, but I'm not good enough with Javascript yet to do it.-->
+    </td>
+    <td class="facts">34</td>
+    <td class="facts">MD</td>
+    <td class="facts">R</td>
+    <td class="facts"><table class="choices"><tr>
+        <td>Stand with Israel</td></tr><tr><td><select class="Rating">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="8">9</option>
+        <option value="8">10</option>
+      </select></td></tr></table></td>
+    <td class="facts"><table class="choices"><tr>
+        <td>Praise Jesus</td></tr><tr><td><select class="Rating">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="8">9</option>
+        <option value="8">10</option>
+      </select></td></tr></table></td>
+    <td class="facts"><table class="choices"><tr>
+        <td>No Abortion</td></tr><tr><td><select class="Rating">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="8">9</option>
+        <option value="8">10</option>
+      </select></td></tr></table></td>
+    <td class="facts"><table class="choices"><tr>
+        <td>Second Ammendment</td></tr><tr><td><select class="Rating">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="8">9</option>
+        <option value="8">10</option>
+      </select></td></tr></table></td>
+    <td class="facts"><table class="choices"><tr>
+        <td>Less Taxes</td></tr><tr><td><select class="Rating">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="8">9</option>
+        <option value="8">10</option>
+      </select></td></tr></table></td>
+    <td class="facts"><table class="choices"><tr>
+        <td>Privateize it</td></tr><tr><td><select class="Rating">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="8">9</option>
+        <option value="8">10</option>
+      </select></td></tr></table></td>
+</tr>
+<tr>
+    <td class="facts">Emma</td>
+    <td class="facts">34</td>
+    <td class="facts">CA</td>
+    <td class="facts">D</td>
+    <td class="facts"><table class="choices"><tr>
+        <td>No war in Iraq</td></tr><tr>
+        <td><select class="Rating">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="8">9</option>
+            <option value="8">10</option>
+          </select></td></tr></table></td>
+    <td class="facts"><table class="choices"><tr>
+        <td>Seperate Church and State</td></tr><tr><td><select class="Rating">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="8">9</option>
+        <option value="8">10</option>
+      </select></td></tr></table></td>
+    <td class="facts"><table class="choices"><tr>
+      <td>Women's right to choose</td></tr><tr><td><select class="Rating">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="8">9</option>
+        <option value="8">10</option>
+      </select></td></tr></table></td>
+    <td class="facts"><table class="choices"><tr><td>Gun reform</td></tr>
+      <tr><td><select class="Rating">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="8">9</option>
+        <option value="8">10</option>
+      </select></td></tr></table></td>
+    <td class="facts"><table class="choices"><tr>
+      <td>Expand social security</td></tr><tr><td><select class="Rating">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="8">9</option>
+        <option value="8">10</option>
+      </select></td></tr></table></td>
+    <td class="facts"><table class="choices"><tr>
+        <td>Free College</td></tr><tr><td><select class="Rating">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="8">9</option>
+        <option value="8">10</option>
+      </select></td></tr></table></td>
+</tr>
+</table>
+</div>
+<div class="submit">
+  <!--Again connect this with the code that you use so that this button generates the results list.-->
+    <button type="button">Submit!</button>
+</div>
+</body>
+</html>
