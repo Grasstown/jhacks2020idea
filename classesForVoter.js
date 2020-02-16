@@ -6,12 +6,10 @@ class Issue{
 			this.name = name.name;
 			this.description = name.description;
 			this.rank = 0;
-			this.leaning = 0; //left or right of 0, 0 being moderate or undecided
 		} else {
 			this.name = name;
 			this.description = description;
 			this.rank = 0; 
-			this.leaning = 0;
 		}
 	}
 	
@@ -29,14 +27,6 @@ class Issue{
 	
 	get _rank(){
 		return this.rank;
-	}
-	
-	set _leaning(leaning){
-		this.leaning = leaning;
-	}
-	
-	get _leaning(leaning){
-		return this.leaning;
 	}
 	
 	equals(other){
@@ -225,10 +215,6 @@ class UserMatch{
 	// so not sure this works
 	setIssueImportance(issue, rank){
 		issue.rank(rank);
-	}
-	
-	setIssueLeaning(issue, leaning){
-		issue.leaning(leaning);
 	}
 	
 	sortToMatch(){
