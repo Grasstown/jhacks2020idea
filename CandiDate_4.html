@@ -31,7 +31,6 @@ body {
     color: black;
     font-size: 50px;
     font-family: Helvetica;
-	text-align: center;
 }
 
 .candidates {
@@ -51,7 +50,7 @@ p {
 </style>
 <title>CandiDate</title>
 </head>
-<body onload = addRow(candidateExample);>
+<body onload = initializeRows(candidateExample2);>
   <!--I added a logo here. If this logo is not good enough just insert another png or jpg image in 
   img src. To edit it so it will only appear in the top right corner there is a css attribute that
 should do that.-->
@@ -80,181 +79,6 @@ should do that.-->
     <th class="info">Gun Control</th>
     <th class="info">Tax Reform</th>
     <th class="info">Education</th>
-</tr>
-
-<tr>
-    <td class="facts">
-        Bob
-        <!-- Rather than have hard coded values in these cells, do <script></script>
-        that will read a data (in this case, the candidate name) from the csv file Do this in between all the
-      I looked up some ways to do this on stack over flow, but I'm not good enough with Javascript yet to do it.-->
-    </td>
-    <td class="facts">34</td>
-    <td class="facts">MD</td>
-    <td class="facts">R</td>
-    <td class="facts"><table class="choices"><tr>
-        <td>Stand with Israel</td></tr><tr><td><select class="Rating">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="8">9</option>
-        <option value="8">10</option>
-      </select></td></tr></table></td>
-    <td class="facts"><table class="choices"><tr>
-        <td>Praise Jesus</td></tr><tr><td><select class="Rating">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="8">9</option>
-        <option value="8">10</option>
-      </select></td></tr></table></td>
-    <td class="facts"><table class="choices"><tr>
-        <td>No Abortion</td></tr><tr><td><select class="Rating">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="8">9</option>
-        <option value="8">10</option>
-      </select></td></tr></table></td>
-    <td class="facts"><table class="choices"><tr>
-        <td>Second Amendment</td></tr><tr><td><select class="Rating">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="8">9</option>
-        <option value="8">10</option>
-      </select></td></tr></table></td>
-    <td class="facts"><table class="choices"><tr>
-        <td>Less Taxes</td></tr><tr><td><select class="Rating">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="8">9</option>
-        <option value="8">10</option>
-      </select></td></tr></table></td>
-    <td class="facts"><table class="choices"><tr>
-        <td>Privatize it</td></tr><tr><td><select class="Rating">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="8">9</option>
-        <option value="8">10</option>
-      </select></td></tr></table></td>
-</tr>
-<tr>
-    <td class="facts">Emma</td>
-    <td class="facts">34</td>
-    <td class="facts">CA</td>
-    <td class="facts">D</td>
-    <td class="facts"><table class="choices"><tr>
-        <td>No war in Iraq</td></tr><tr>
-        <td><select class="Rating">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="8">9</option>
-            <option value="8">10</option>
-          </select></td></tr></table></td>
-    <td class="facts"><table class="choices"><tr>
-        <td>Separate Church and State</td></tr><tr><td><select class="Rating">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="8">9</option>
-        <option value="8">10</option>
-      </select></td></tr></table></td>
-    <td class="facts"><table class="choices"><tr>
-      <td>Women's right to choose</td></tr><tr><td><select class="Rating">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="8">9</option>
-        <option value="8">10</option>
-      </select></td></tr></table></td>
-    <td class="facts"><table class="choices"><tr><td>Gun reform</td></tr>
-      <tr><td><select class="Rating">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="8">9</option>
-        <option value="8">10</option>
-      </select></td></tr></table></td>
-    <td class="facts"><table class="choices"><tr>
-      <td>Expand social security</td></tr><tr><td><select class="Rating">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="8">9</option>
-        <option value="8">10</option>
-      </select></td></tr></table></td>
-    <td class="facts"><table class="choices"><tr>
-        <td>Free College</td></tr><tr><td><select class="Rating">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="8">9</option>
-        <option value="8">10</option>
-      </select></td></tr></table></td>
 </tr>
 </table>
 

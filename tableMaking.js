@@ -55,6 +55,16 @@ function addRow(candidate){
 	
 	for(i=4; i<4+ISSUE_NUM; i++){
 		document.getElementById(i).removeAttribute("id");
+	}	
+}
+
+var bob = ["Bob", 34, "MD", "D", "Blah1","Blah2", "Blah3","Blah4","Blah5","Blah6"];
+var joe = ["Joe", 34, "VA", "R", "Blahad1","Bdlah2",
+					"Bglah3","Blsfgah4","Balah5","Blasdah6"];
+var candidateExample2 = [joe, bob];
+					
+function initializeRows(candidateList){
+	for(a=0;a<candidateList.length;a++){
+		addRow(candidateList[a]);
 	}
-	
 }
