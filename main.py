@@ -39,5 +39,10 @@ def submit():
 def home():
     return render_template('index.html')
 
+@app.route('/vote')
+def vote():
+    return render_template('CandiDate_4.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
+

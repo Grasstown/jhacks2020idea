@@ -2,8 +2,8 @@ library(tidyverse)
 library(readr)
 library(pracma)
 
-poli <- read_csv("C:/Users/Alex/Google Drive/jhacks/polidummydata.csv")
-user <- read_csv("C:/Users/Alex/Google Drive/jhacks/userdummydata.csv")
+poli <- read_csv("../candidateData/a.csv")
+user <- read_csv("../userData/b.csv")
 
 enddata <- dplyr::left_join(poli, user)
 
