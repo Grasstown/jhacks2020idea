@@ -4,6 +4,8 @@
 <!-- Another option would be to have the script here that literally creates the tables based
 on the csv file. I would look up how to create tables in javascript and apply the attributes for
 the table that I have created below-->
+
+
 <meta charset="utf-8"/>
 <style>
 body {
@@ -12,11 +14,16 @@ body {
 }
 
 .info {
-    border:3px solid black
-
+    border:3px solid black;
+	padding: 10px;
 }
 .facts {
-    border:3px solid black
+    border:3px solid black;
+	text-align:center;
+}
+
+.choices{
+	text-align: left;
 }
 
 .heading {
@@ -28,6 +35,7 @@ body {
 .candidates {
     background-color:white;
     font-family: Helvetica;
+	margin: 5px;
 }
 
 p {
@@ -57,7 +65,7 @@ should do that.-->
 </p>
 </div>
 <div class="Candidates">
-<table class="candidates">
+<table class="candidates" id="candidates">
 <tr class="issues">
     <th class="info">Name</th>
     <th class="info">Age</th>
@@ -121,7 +129,7 @@ should do that.-->
         <option value="8">10</option>
       </select></td></tr></table></td>
     <td class="facts"><table class="choices"><tr>
-        <td>Second Ammendment</td></tr><tr><td><select class="Rating">
+        <td>Second Amendment</td></tr><tr><td><select class="Rating">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -147,7 +155,7 @@ should do that.-->
         <option value="8">10</option>
       </select></td></tr></table></td>
     <td class="facts"><table class="choices"><tr>
-        <td>Privateize it</td></tr><tr><td><select class="Rating">
+        <td>Privatize it</td></tr><tr><td><select class="Rating">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -180,7 +188,7 @@ should do that.-->
             <option value="8">10</option>
           </select></td></tr></table></td>
     <td class="facts"><table class="choices"><tr>
-        <td>Seperate Church and State</td></tr><tr><td><select class="Rating">
+        <td>Separate Church and State</td></tr><tr><td><select class="Rating">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
