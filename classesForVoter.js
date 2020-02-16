@@ -223,16 +223,9 @@ class UserMatch{
 		if(filterParty){
 			candidates = filterByParty(candidates);
 		}
-		// this is where the algorithm would be run
-		//the algo is not in here right now
-		// the algo should give each candidate a score
 		
-		candidates.sort(candidate.compareTo(other)); //would this work? hm... orz
-		// would theoretically sort candidates with highest to lowest score
-		// am not totally sure if the array.sort(fxn) method for js would
-		// take an instance method
+		// send all data to export to csv so that it can go to R and do things
 		
-		return candidates;
 	}
 	
 	// this is not meant to be called except for when sorting
