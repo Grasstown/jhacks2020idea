@@ -20,3 +20,11 @@ function validation() {
 		return false;
 	}
 }
+
+function redirect(p) {
+	if (parseInt(p) == 1) {
+		window.location.replace("localhost:5000/vote")
+	} else {
+		window.location.replace("localhost:5000/candidate")
+	}
+}

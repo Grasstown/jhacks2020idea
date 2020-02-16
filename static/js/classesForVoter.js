@@ -52,8 +52,7 @@ class Candidate{
 		if(name instanceof Candidate){
 			this.name = name.name;
 			this.description = name.description;
-			this.party = name.party;
-			this.issues = name.issues;
+			this.party = name.party; this.issues = name.issues;
 			this.score = 0;
 		} else {
 			this.name = name;
@@ -106,7 +105,7 @@ class Candidate{
 	compareTo(other){
 		if(other.score - this.score<0) {
 			return -1;
-		}else if(other.score) - this.score>0) {
+		}else if((other.score - this.score)>0) {
 			return 1;
 		}else{
 			return 0;
