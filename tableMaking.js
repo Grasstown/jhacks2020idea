@@ -12,10 +12,11 @@ function addElement(typeIn, textIn, existingId, classIn, setId, value){
 	existingElement.appendChild(newElement);
 	}
 
-var ISSUE_NUM = 6;
+
+// example candidate to check if it works
 var candidateExample = ["Bob", 34, "MD", "D", "Blah","Blah","Blah","Blah","Blah","Blah"];
 
-
+var ISSUE_NUM = 6; //number of columns for individual issues
 // adds an empty row
 function addRow(candidate){
 	addElement("tr", "", "candidates", "", "temp");
