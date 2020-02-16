@@ -14,7 +14,8 @@ function addElement(typeIn, textIn, existingId, classIn, setId, value){
 
 
 // example candidate to check if it works
-var candidateExample = ["Bob", 34, "MD", "D", "Blah","Blah","Blah","Blah","Blah","Blah"];
+var candidateExample = ["Bob", 34, "MD", "D", "Blah1","Blah2",
+					"Blah3","Blah4","Blah5","Blah6"];
 
 var ISSUE_NUM = 6; //number of columns for individual issues
 // adds an empty row
@@ -35,7 +36,7 @@ function addRow(candidate){
 		
 		addElement("table", "", "current", "choices", "currentTable");
 			addElement("tr", "", "currentTable", "", "row1");
-				addElement("td", "blahahsdaohsd", "row1");
+				addElement("td", candidate[i], "row1");
 			addElement("tr", "", "currentTable", "", "row2");
 				addElement("td", "", "row2", "", "rateCol");
 					addElement("select", "", "rateCol", "Rating", "rates")
